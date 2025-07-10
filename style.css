@@ -1,0 +1,84 @@
+
+    /*Inbuild css*/
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    /*var colors*/
+
+    :root {
+        --white: hsl(0, 0%, 100%);
+
+        --stone100: hsl(30, 54%, 90%);
+        --stone150: hsl(30, 18%, 87%);
+        --stone600: hsl(30, 10%, 34%);
+        --stone900: hsl(24, 5%, 18%);
+
+        --Brown800: hsl(14, 45%, 36%);
+
+        --Rose800: hsl(332, 51%, 32%);
+        --Rose50: hsl(330, 100%, 98%);
+    }
+
+
+    /*body*/
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--stone100);
+        color: var(--stone900);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+    }
+
+    main {
+        width: 48.8rem;
+        background-color: var(--white);
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.75rem;
+        justify-content: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column; 
+        gap: 1.5rem;
+    
+    }
+
+
+    img {
+        width: 43.3rem;
+        height: auto;
+        border-radius: 1em;
+    }
+
+    h1 {
+        font-family: 'Young Serif';
+        font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+        font-weight: 200;
+        font-style: normal;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.05rem;
+        color: var(--stone600);
+    }
+
+
+    
