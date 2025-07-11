@@ -30,8 +30,6 @@
     }
 
     body {
-        margin: 0;
-        padding: 0;
         background-color: var(--stone100);
         color: var(--stone900);
         display: flex;
@@ -43,23 +41,23 @@
     }
 
     main {
-        width: 48.8rem;
+        width: 48.75rem;
         background-color: var(--white);
         border-radius: 1em;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 2.75rem;
+        align-items: center; 
         justify-content: center;
     }
 
     header {
+        height: 43.75rem;
         display: flex;
+        justify-content: center;
+        align-items: flex-start;
         flex-direction: column; 
         gap: 1.5rem;
-    
     }
-
 
     img {
         width: 43.3rem;
@@ -78,7 +76,32 @@
     p {
         font-size: 1.05rem;
         color: var(--stone600);
+        margin: 0;
     }
 
-
+    .preparationbox {
+        padding: 1.875rem;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--Rose50);
+        color: var(--Rose800);
+        width: 43.3rem;
+    }
     
+    .preparationbox h3 {
+        padding: 0;
+        margin: 0;
+        font-size: 21px;
+    }
+
+    .preparationbox ul {
+        color: var(--stone600);
+    }
+
+    .preparationbox ul li  {
+        padding-left: 30px;
+    }
+
+    .preparationbox ul li::marker {
+        color: var(--Rose800);
+    }
