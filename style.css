@@ -4,104 +4,151 @@
     .attribution a { color: hsl(228, 45%, 44%); }
 
 
-    /*var colors*/
+    html {
+    box-sizing: border-box;
+}
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
-    :root {
-        --white: hsl(0, 0%, 100%);
+/*var colors*/
 
-        --stone100: hsl(30, 54%, 90%);
-        --stone150: hsl(30, 18%, 87%);
-        --stone600: hsl(30, 10%, 34%);
-        --stone900: hsl(24, 5%, 18%);
+:root {
+    --white: hsl(0, 0%, 100%);
 
-        --Brown800: hsl(14, 45%, 36%);
+    --stone100: hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+    --stone600: hsl(30, 10%, 34%);
+    --stone900: hsl(24, 5%, 18%);
 
-        --Rose800: hsl(332, 51%, 32%);
-        --Rose50: hsl(330, 100%, 98%);
-    }
+    --Brown800: hsl(14, 45%, 36%);
 
+    --Rose800: hsl(332, 51%, 32%);
+    --Rose50: hsl(330, 100%, 98%);    
+    }     
 
-    /*body*/
+body {
+    background-color: var(--stone100);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--stone600);
+    font-family: 'Outfit',sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
 
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
+main {
+    background-color: var(--white);
+    width: 780px;
+    padding: 40px;
+    border-radius: 1rem;
+}
 
-    body {
-        background-color: var(--stone100);
-        color: var(--stone900);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
-    }
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9em;
+}
 
-    main {
-        width: 48.75rem;
-        background-color: var(--white);
-        border-radius: 1em;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: center;
-    }
+img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
 
-    header {
-        height: 43.75rem;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column; 
-        gap: 1.5rem;
-    }
-
-    img {
-        width: 43.3rem;
-        height: auto;
-        border-radius: 1em;
-    }
-
-    h1 {
-        font-family: 'Young Serif';
-        font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-        font-weight: 200;
-        font-style: normal;
-        margin: 0;
-    }
-
-    p {
-        font-size: 1.05rem;
-        color: var(--stone600);
-        margin: 0;
-    }
-
-    .preparationbox {
-        padding: 1.875rem;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--Rose50);
-        color: var(--Rose800);
-        width: 43.3rem;
-    }
+h1 {
     
-    .preparationbox h3 {
-        padding: 0;
-        margin: 0;
-        font-size: 21px;
-    }
+    font-family: 'Young Serif';
+    font-size: 2.65rem;
+    font-weight: 100;
+}
 
-    .preparationbox ul {
-        color: var(--stone600);
-    }
+p {
+    font-style: normal;
+    font-size: 1.05rem;
+    font-weight: 400;
+}
 
-    .preparationbox ul li  {
-        padding-left: 30px;
-    }
+hr {
+    width: 700px;
+    margin: 2.25rem 0;
+}
 
-    .preparationbox ul li::marker {
-        color: var(--Rose800);
-    }
+.defaultsize {
+    display: flex;
+    flex-direction: column; 
+}
+
+.preparationbox {
+    max-width: 700px;
+    background-color: var(--Rose50);
+    margin: 1.88rem 0;
+    border-radius: 1rem;
+    padding: 1rem 1.88rem;
+}
+
+.preparationbox  h3 {
+    color: var(--Rose800);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+ul,ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem 1.3rem 0;
+}
+
+ul li,ol li {
+    padding: 0 1.4rem;
+}
+
+.preparationbox ul li::marker {
+    color: var(--Rose800);
+}
+
+h2 {
+    font-family: 'Young Serif';
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--Brown800);
+}
+
+table {
+    margin: 1.88rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    border-collapse: collapse;
+    border: none;
+    max-width: 700px;
+}
+
+th, td {
+    padding: 1rem 14rem 1rem 2rem;
+    text-align: left;        
+    border: none;   
+}
+
+th {
+    padding-right: 18.8rem;
+}
+
+tr {
+    border-bottom: 2px solid #ddd;
+    color: var(--Brown800);
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+ 
+strong {
+    color: var(--stone600);
+}
