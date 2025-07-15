@@ -1,16 +1,12 @@
 
-    /*Inbuild css*/
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+/*Inbuild css*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
-
-    html {
-    box-sizing: border-box;
-}
 *, ::before, ::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 /*var colors*/
@@ -32,7 +28,8 @@
     /*padding and margin*/
 
     :root {
-        --mobpad: 3rem;
+        --mobpad: 1rem;
+        --mobmargin: 2rem 1rem;
     }
 
 body {
@@ -75,13 +72,13 @@ img {
 h1 {
     color: var(--stone900);
     font-family: 'Young Serif';
-    font-size: clamp(4.5rem, 9vw, 3rem);
+    font-size: clamp(1.5rem, 9vw, 3rem);
     font-weight: 100;
 }
 
 p {
     font-style: normal;
-    font-size: clamp(2.23rem, 9vw, 1.05rem);
+    font-size: clamp(1em, 9vw, 1.05rem);
     font-weight: 400;
 }
 
@@ -105,7 +102,7 @@ hr {
 
 .preparationbox  h3 {
     color: var(--Rose800);
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 9vw, 1.3em);
     font-weight: 700;
 }
 
@@ -126,7 +123,7 @@ ul li,ol li {
 
 h2 {
     font-family: 'Young Serif';
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 9vw, 3rem);
     font-weight: 400;
     color: var(--Brown800);
 }
@@ -169,21 +166,60 @@ strong {
 
 @media screen and (max-width:500px) {
 
+    html {
+        width: 20rem;
+    }
+    
     body, main {
-        width: 50rem;
+        width: 20rem;
         margin: 0;
         padding: 0; 
-        font-size: 2rem;
+        font-size: 1em;
+        overflow-x: hidden;
+        background-color: var(--white);
+    
     }
 
 
     .intro {
+        width: 20rem;
         padding: 0 var(--mobpad);
+        margin: 0;
     }
     
 
     img {
-        max-width: 100%;
+        max-width: 20rem;
         border-radius: 0;
+    }
+
+    hr {
+        width: 18rem;
+        margin: 2rem 1rem;
+    }
+
+    .preparationbox {
+        margin: var(--mobmargin);
+    }
+
+    ul, li{
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    ul li,ol li {
+    padding: 0 1rem; 
+    }
+
+    section {
+        margin: var(--mobmargin);
+    } 
+
+    th, td {
+        padding: 1rem 2rem;
+    }
+
+    th {
+        text-align: right;
     }
 }
